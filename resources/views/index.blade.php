@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ asset('css/style_sheet.css') }}">
 </head>
 <body>
 
 <!-- BANUA SAGANA LOGO-->
-<img src="{{ asset('images/banua_sagana.jpg') }}" alt="Banua Sagana Logo">
+<img src="{{ asset('images/banua_sagana.jpg') }}" alt="Banua Sagana Logo" height="180" width="185"/>
 <p>Welcome to Banua SaGana's community-driven food sharing platform—where surplus meets need. Here, neighbors connect
   to share extra food, reduce waste, and support one another with dignity and fairness. Join us in turning excess into
   opportunity</p>
@@ -22,7 +23,7 @@
   </nav>
 
   <!-- SEARCH -->
-  <section id="search" class="p-6">
+  <section id="search">
     <h2>Find Food</h2>
     <input id="location" placeholder="Search by location" />
     <input id="foodType" placeholder="Search by food type" />
