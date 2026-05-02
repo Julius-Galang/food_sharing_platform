@@ -53,14 +53,21 @@ img.large {
 width: 100%
 }
 
-/*
+
 @media all and (min-width: 900px) {
-    article {
+    section1 {
         float: left;
-        width: 30%;
+        margin-left: 32px;
+        width: 33%;
     }
 
-  
+    section2 {
+        float: left;
+        margin-left: 32px;
+        width: 66%;
+    }
+}
+    /* 
 @media all and (min-width: 900px) {
  header h1 {
  float: left;

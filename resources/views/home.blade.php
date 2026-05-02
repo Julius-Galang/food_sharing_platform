@@ -13,25 +13,29 @@
  to share extra food, reduce waste, and support one another with dignity and fairness. Join us in turning excess intoopportunity!</section>
 
    <!-- POST FOOD TO SHARE -->
-    <section id="post">
+    <div id="post">
     <h2>Post Food</h2>
     <input id="name" placeholder="Describe your food">
     <select id="foodType" placeholder="Select food type"></select> <!-- should be from a databas -->
     <button onclick="postFood()">Post</button>
+    </div>
 
   <!-- SEARCH FOOD LISTINGS -->
-    <section id="search">
+    <div id="search">
     <h2>Find Food</h2>
     <input id="location" placeholder="Search by location" />
     <input id="foodType" placeholder="Search by food type" />
     <button onclick="searchFood()">Search</button>
+    </div>
+
+    <section>
     <div>
     @forelse ($foodposts as $foodpost)
       <article>
-        <h4>Food Item: {{ $chirp->user ? $chirp->user->name : 'Anonymous' }} </h4>
-        <p> Posted by: {{ $chirp->Location }} </p>
-        <p> Location: {{ $chirp->Type }} </p>
-        <p> Food Type: {{ $chirp->"Postedby"}} </p>
+        <h4>Food Item: {{ $foodpost->Name }} </h4>
+        <p> Posted by: {{ $foodpost->Postedby }} </p>
+        <p> Location: {{ $foodpost->Location }} </p>
+        <p> Food Type: {{ $foodpost->Type}} </p>
         <button onclick="requestMessage()">Message</button>
       </article>
     @endforeach
