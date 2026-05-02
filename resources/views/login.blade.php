@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Login Page</title>
-<link type="text/css" rel="stylesheet" href="style_sheet.css"></link>
+<link rel="stylesheet" href="{{ asset('css/style_sheet.css') }}">
 
 <!-- BANUA SAGANA LOGO-->
-<p><img src="banua_sagana.jpg" alt="Banua Sagana Logo" /></p>
+<p><img src="{{ asset('images/banua_sagana.jpg') }}" alt="Banua Sagana Logo" height="180" width="185"/></p>
 
 <!-- LOGIN -->
 <section id="login">

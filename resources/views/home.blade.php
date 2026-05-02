@@ -7,43 +7,49 @@
 </head>
 <body>
 
-<!-- BANUA SAGANA LOGO-->
-<img src="{{ asset('images/banua_sagana.jpg') }}" alt="Banua Sagana Logo" height="180" width="185"/>
-<p>Welcome to Banua SaGana's community-driven food sharing platform—where surplus meets need. Here, neighbors connect
-  to share extra food, reduce waste, and support one another with dignity and fairness. Join us in turning excess into
-  opportunity</p>
+<!-- BANUA SAGANA LOGO -->
+<section><img src="{{ asset('images/banua_sagana.jpg') }}" alt="Banua Sagana Logo" height="180" width="185"/></section>
+<section>Welcome to Banua SaGana's community-driven food sharing platform—where surplus meets need. Here, neighbors connect
+ to share extra food, reduce waste, and support one another with dignity and fairness. Join us in turning excess intoopportunity!</section>
 
-  <!-- NAVBAR -->
-  <nav>
-    <h2>Food Share</h2>
-    <ul>
-      <li>My Food Post</li>
-      <li>Logout</li>
-    </ul>
-  </nav>
+   <!-- POST FOOD TO SHARE -->
+    <section id="post">
+    <h2>Post Food</h2>
+    <input id="name" placeholder="Describe your food">
+    <select id="foodType" placeholder="Select food type"></select> <!-- should be from a databas -->
+    <button onclick="postFood()">Post</button>
 
-  <!-- SEARCH -->
-  <section id="search">
+  <!-- SEARCH FOOD LISTINGS -->
+    <section id="search">
     <h2>Find Food</h2>
     <input id="location" placeholder="Search by location" />
     <input id="foodType" placeholder="Search by food type" />
     <button onclick="searchFood()">Search</button>
-  </section>
-
-  <!-- FOOD LISTINGS -->
-  <section id="listings">
-    <h2>Available Food</h2>
-    <div id="foodList"></div>
-  </section>
+    <div>
+    @forelse ($foodposts as $foodpost)
+      <article>
+        <h4>Food Item: {{ $chirp->user ? $chirp->user->name : 'Anonymous' }} </h4>
+        <p> Posted by: {{ $chirp->Location }} </p>
+        <p> Location: {{ $chirp->Type }} </p>
+        <p> Food Type: {{ $chirp->"Postedby"}} </p>
+        <button onclick="requestMessage()">Message</button>
+      </article>
+    @endforeach
+   </div>
+   </section>
 
   <!-- MESSAGING -->
   <section id="messages">
     <h2>Messages</h2>
+    <h4>You are chatting with: </h4>
     <div id="chatBox"></div>
     <input id="messageInput" placeholder="Type a message" />
     <button onclick="sendMessage()">Send</button>
   </section>
 
+  <button onclick="logout()">Logout</button>
+
+  <!--
   <script>
     const foods = [
       { name: "Cooked Rice", location: "Laguna", type: "Meal" },
@@ -98,6 +104,7 @@
     // Initial load
     displayFoods(foods);
   </script>
+  -->
 
 </body>
 </html>

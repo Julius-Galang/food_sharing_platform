@@ -17,59 +17,19 @@ body {
     padding-right: 24px;
 }
 
-header h1, header section, article, img, article1 h2.hobbies, video{
+article {
 text-align:center;
-}
-
-nav ul {
-list-style-type: none;
-background-color: #40C0DD;
-font-family: agency fb;
-font-weight: bold;
-padding: 8px;
-}
-
-nav ul li {
-display: inline;
-border-right: 2px solid #111111;
-padding-right: 8px;
-padding-left: 8px;	
-}
-
-nav ul li:last-child {
-border-right: none;
-}
-
-nav ul li a, footer section3 p a {
-text-decoration: none;
-color: #111111;
-}
-
-nav ul li.selected, footer section3 p.selected	 {
-color: #606060;
-}
-
-nav ul li a:link, footer section3 p a:link {
-color: blue;
-}
-
-nav ul li a:visited, footer section3 p a:visited{
-color: purple;
-}
-
-nav ul li a:hover, footer section3 p a:hover {
-text-decoration: underline;
-}
-
-nav ul li a:active {
-text-decoration: underline;
-background-color: black;
-color: white;
 }
 
 body, footer, article, img, header nav ul{
 border: 2px solid Gray;
 border-radius:16px;
+}
+
+article {
+    border: 2px Black;
+    background-color: white;
+    border-radius: 12px;
 }
 
 footer {
@@ -93,6 +53,14 @@ img.large {
 width: 100%
 }
 
+/*
+@media all and (min-width: 900px) {
+    article {
+        float: left;
+        width: 30%;
+    }
+
+  
 @media all and (min-width: 900px) {
  header h1 {
  float: left;
@@ -111,18 +79,18 @@ width: 100%
 }
 
 @media all and (min-width: 900px) {
- .section1, .section1. p img, .section1 video {
+    .section1, .section1 p img, .section1 video, .section1 img {
  float: left;
  margin-left: 32px;
- width: 63%;
+ width: 33%;
  text-align: center;
  }
  
- .section2{
+ .section2 {
  float: left;
- padding-left: 0px;
+ padding-left: 32px;
  padding-top: 90px;
- width: 33%;
+ width: 63%;
  }
 
  footer {
@@ -130,6 +98,12 @@ width: 100%
 }
 }
 
-.hidden {
-    display: none;
-}
+@media all and (min-width: 900px) {
+    .section1, .section1 p img, .section1 video, .section1 img {
+        float: left;
+        margin-left: 32px;
+        width: 33%;
+        text-align: center;
+    }
+
+*/
