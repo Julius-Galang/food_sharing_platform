@@ -9,7 +9,7 @@ class FoodPost extends Model
 {
     protected $fillable = [
         'Name',
-        'Posted by',
+        'Postedby',
         'Location',
         'Type',
 
