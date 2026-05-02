@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class FoodPost extends Model
 {
-    protected $table = 'foodposts';
     protected $fillable = [
         'Name',
         'Posted by',
